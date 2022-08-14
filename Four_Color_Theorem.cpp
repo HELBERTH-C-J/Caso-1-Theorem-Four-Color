@@ -2,6 +2,22 @@
 // Elaborado por Helberth Fabricio Cubillo Jarquin - 2021110838 
 // 13 de agosto del 2022
 
+
+/* Para sumisnistrar el mapa se utilizan dos arrays:
+*  Uno el cual contendraun array del tipo (info_zona) al cual se le debe indicar la cantidad de zonas que  
+*  poseera este mapa y se inicializan sus colores en limpio
+* 
+*  El segundo array de tipo multidimensional contentra los datos de los adyacentes por zona 
+*
+*  En caso de disminuir el tamanno y cantidad de adyacencias del mapa se deben cambiar los #define CANTIDAD_ADYACENTES y CANTIDAD_ZONAS
+* 
+*  En caso de aumentar el tammano del mapa se deben cambiar los  # define antes mencionados 
+* 
+*  En caso de sobrepasar el limite de casos que es el equivalente a maximo de adyacencias que soporta el codigo
+*  este mismo debe ser modificado para que pueda asiganar de una manera correcta los colores (VER LINEA 248 Y 249 PARA MAS INFORMACION) 
+*/
+
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -230,7 +246,7 @@ int main()
 				ArrayZonas[id].color = COLOR4;
 			}
 			//En caso de tener 8 mas puntos de adyacencia se crea un caso con por cada punto de adyacencia que se agrege 
-			//y se crean nuevas variables del tipo (colorAdyacenteX) y se continia con el patron de else if y sus comparaciones  
+			//y se crean nuevas variables del tipo (colorAdyacenteX) y se continua con el patron de else if y sus comparaciones  
 
 			break;
 		default:
